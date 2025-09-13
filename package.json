@@ -1,0 +1,19 @@
+{
+  "name": "warm-heart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Timur",
+  "license": "ISC",
+  "devDependencies": {
+    "postcss-pxtorem": "^6.1.0",
+    "sass": "^1.92.1",
+    "vite": "^7.1.4"
+  },
+  "dependencies": {
+    "modern-normalize": "^3.0.1"
+  }
+}

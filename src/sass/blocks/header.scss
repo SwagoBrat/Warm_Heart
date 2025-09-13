@@ -1,0 +1,171 @@
+@use"/src/sass/basic/variabels.scss" as *;
+
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+
+    nav {
+        display: none;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .cart {
+        display: none;
+    }
+
+
+    &__burger {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        span {
+            width: 40px;
+            border: 2px solid $black;
+            border-radius: 2px;
+
+            &:nth-child(2) {
+                width: 30px;
+            }
+        }
+
+    }
+
+    .icon-search {
+        display: none;
+    }
+
+    &__title {
+        color: $black;
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 34px;
+        text-transform: uppercase;
+    }
+
+    .tabs {
+        display: none;
+    }
+
+    &__icons {
+        display: flex;
+
+        a {
+            display: block;
+            font-size: 21px;
+            color: $black;
+            text-decoration: none;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 25px;
+
+            span {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:480px) {
+    .header {
+
+        .mobile {
+            display: none;
+        }
+
+        .tabs {
+            display: inline;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .header {
+        .icon-search {
+            display: block;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+
+        &__burger {
+            width: 124px;
+        }
+
+        &__icons {
+            gap: 30px;
+
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .header {
+        .search {
+            display: inline;
+        }
+
+        .cart {
+            display: inline;
+        }
+
+        .icon-search {
+            display: none;
+        }
+
+
+        .icon-shop {
+            display: none;
+        }
+
+        &__burger {
+            width: 124px;
+        }
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .header {
+        &__burger {
+            display: none;
+        }
+
+        nav {
+            display: block;
+
+            ul {
+                padding: 0;
+                display: flex;
+                justify-content: end;
+                list-style: none;
+                gap: 50px;
+
+                a {
+                    text-decoration: none;
+
+                    li {
+                        color: $black;
+                        font-size: 21px;
+                        font-weight: 400;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+
+        &__icons {
+            width: 286px;
+            justify-content: end;
+        }
+    }
+}
