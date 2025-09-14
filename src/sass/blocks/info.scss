@@ -4,7 +4,6 @@
     margin-top: 20px;
     position: relative;
 
-
     &__pagenation {
         z-index: 10000;
         position: absolute;
@@ -69,15 +68,6 @@
         }
     }
 
-    &__img {
-        z-index: 10000;
-        width: 180px;
-        height: 174px;
-        position: absolute;
-        left: 50%; // центруємо по горизонталі
-        bottom: 160px;
-        transform: translateX(-50%) rotate(15deg);
-    }
 
 
     &__bg-right {
@@ -96,6 +86,20 @@
 
 }
 
+
+.photo {
+    position: absolute;
+    z-index: 10000;
+    width: 180px;
+    height: 174px;
+    position: absolute;
+    left: 50%; // центруємо по горизонталі
+    bottom: 160px;
+    transform: translateX(-50%) rotate(15deg);
+
+
+}
+
 @media screen and (min-width:480px) {
     .info {
         &__title {
@@ -103,18 +107,23 @@
             line-height: 58px;
         }
 
-        &__img {
-            left: 75%;
-        }
+
 
         &__text {
             width: 440px;
         }
     }
+
+    .photo {
+        left: 75%;
+    }
 }
 
 @media screen and (min-width:768px) {
     .info {
+
+        margin-top: 30px;
+
         &__wrapper {
             display: grid;
             grid-template-columns: 3fr 1fr;
@@ -132,12 +141,6 @@
                 width: 100%;
                 height: 100%;
             }
-        }
-
-        &__img {
-            bottom: -50px;
-            width: 251px;
-            height: 241px;
         }
 
         &__pagenation {
@@ -167,6 +170,12 @@
             font-size: 21px;
         }
     }
+
+    .photo {
+        bottom: -50px;
+        width: 251px;
+        height: 241px;
+    }
 }
 
 @media screen and (min-width:1000px) {
@@ -184,35 +193,40 @@
         &__wrapper {
             grid-template-columns: 3fr 1.3fr;
         }
+    }
 
-        &__img {
-            width: 312px;
-            height: 300px;
-            bottom: 25%;
-            left: 70%;
+    .photo {
+        width: 312px;
+        height: 300px;
+        bottom: 25%;
+        left: 70%;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-left-color: black;
+            transform: rotate(30deg);
+            bottom: 190px;
+            left: -20px;
         }
 
-        &__circle {
-            &-black {
-                display: block;
-                position: absolute;
-                right: 25%;
-                top: 7%;
-                width: 200px;
-                /* розмір кола */
-                width: 220px;
-                height: 220px;
-                border-radius: 50%;
-                /* форма кола */
-                border: 3px solid transparent;
-                /* прозорий бордер */
-                /* залишаємо одну сторону */
-                border-left-color: black;
-
-                background: transparent;
-                transform: translateX(-25%) rotate(40deg);
-                z-index: 100;
-            }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-left-color: $white;
+            transform: rotate(220deg);
+            bottom: -40px;
+            left: 200px;
         }
     }
 }
@@ -233,16 +247,30 @@
             height: 778px;
         }
 
-        &__img {
-            width: 405px;
-            height: 390px;
-            left: 62.5%;
-            bottom: 30%;
-        }
-
         &__pagenation {
             left: 50%;
         }
 
+    }
+
+    .photo {
+        width: 405px;
+        height: 390px;
+        left: 62.5%;
+        bottom: 30%;
+
+        &::before {
+            width: 200px;
+            height: 200px;
+            bottom: 240px;
+            left: -20px;
+        }
+
+        &::after {
+            width: 200px;
+            height: 200px;
+            bottom: -60px;
+            left: 250px;
+        }
     }
 }
