@@ -1,0 +1,223 @@
+@use "/src/sass/basic/variabels.scss" as *;
+
+.popular {
+    position: relative;
+    padding-top: 70px;
+
+    &__title {
+        color: $black;
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 43px;
+    }
+
+    &__wrapper {
+        margin-top: 40px;
+    }
+
+
+    .bg {
+        background-color: $beige;
+        width: 310px;
+        height: 312px;
+        border-radius: 10%;
+        padding-top: 40px;
+
+        img {
+            background-color: transparent;
+            width: 240px;
+            height: 232px;
+            margin: auto;
+        }
+    }
+
+    .swipper__title {
+        margin-top: 13px;
+        color: $black;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .swipper__parametrs {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            color: $black;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+
+    .swiper-pagination {
+        bottom: -70px;
+    }
+
+    .swiper-pagination-bullet {
+        margin-left: 16px;
+        width: 16px;
+        height: 16px;
+        background-color: $black;
+        opacity: 0.4;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-horizontal.swiper-pagination-bullets {
+        .swiper-pagination-bullet {
+            margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 15px);
+        }
+    }
+
+    &__slider-nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width:480px) {
+    .popular {
+
+        .bg {
+            background-color: $beige;
+            width: 210px;
+            height: 234px;
+
+            img {
+                background-color: transparent;
+                width: 160px;
+                height: 154px;
+                margin: auto;
+            }
+        }
+
+        .swiper-pagination {
+            bottom: -70px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .popular {
+
+        .bg {
+            background-color: $beige;
+            width: 354px;
+            height: 343px;
+
+            img {
+                background-color: transparent;
+                width: 254px;
+                height: 243px;
+                margin: auto;
+            }
+        }
+
+        .swipper__title {
+            color: $black;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+        }
+
+        .swiper-pagination {
+            bottom: -70px;
+        }
+
+        .swipper__parametrs {
+
+            p {
+                color: $black;
+                font-size: 21px;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .popular {
+
+        .bg {
+            background-color: $beige;
+            width: 307px;
+            height: 298px;
+            padding-top: 50px;
+
+            img {
+                background-color: transparent;
+                width: 207px;
+                height: 198px;
+                margin: auto;
+            }
+        }
+
+        .swiper-pagination {
+            bottom: -70px;
+        }
+    }
+}
+
+@media screen and (min-width:1400px) {
+    .popular {
+        .bg {
+            transition: all 0.5s;
+
+            &:hover {
+                border-radius: 50%;
+            }
+        }
+
+        &__slider-nav {
+            position: absolute;
+            display: block;
+            background-color: transparent;
+            border: none;
+            font-size: 28px;
+            width: 50px;
+            height: 60px;
+            z-index: 10000;
+
+        }
+
+        .icon-left-open {
+            bottom: -90px;
+            left: 500px;
+
+        }
+
+        .icon-right-open {
+            bottom: -90px;
+            right: 500px
+        }
+    }
+}
+
+
+@media screen and (min-width:1920px) {
+    .popular {
+
+        .bg {
+            background-color: $beige;
+            width: 386px;
+            height: 376px;
+            padding-top: 60px;
+
+            img {
+                background-color: transparent;
+                width: 266px;
+                height: 256px;
+                margin: auto;
+            }
+        }
+
+        .swiper-pagination {
+            bottom: -70px;
+        }
+    }
+}
