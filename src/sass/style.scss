@@ -1,7 +1,8 @@
+// libs
 @use"/src/sass/libs/modern-normalize.css";
 @use"/src/sass/libs/fontello.css";
 
-
+// blocks 
 @use "/src/sass/basic/basic.scss";
 @use"/src/sass/blocks/info.scss";
 @use"/src/sass/blocks/header.scss";
@@ -10,3 +11,5 @@
 @use "/src/sass/blocks/eco.scss";
 @use "/src/sass/blocks/inst.scss";
 @use "/src/sass/blocks/subscribtion.scss";
+
+@use "/src/sass/blocks/footer.scss"
