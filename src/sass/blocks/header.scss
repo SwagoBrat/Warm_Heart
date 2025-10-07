@@ -3,13 +3,143 @@
 
 
 .header {
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 
-    nav {
+
+    &__menu {
+        z-index: 100000;
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: 1fr 1.7fr;
+
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        transition: all 0.5s;
+        opacity: 0;
+
+
+        &_nav {
+            margin-top: 40px;
+            margin-left: 30px;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                padding: 0;
+                list-style: none;
+
+                li {
+                    a {
+                        color: $black;
+                        font-size: 21px;
+                        font-weight: 400;
+                        line-height: 25px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+
+        &-close {
+            margin-top: 20px;
+            margin-left: 30px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+
+            span {
+                width: 40px;
+                border: 2px solid #2C2C2C;
+                border-radius: 2px;
+                background-color: $black;
+                display: block;
+                border-radius: 10px;
+
+
+                &:nth-child(1) {
+                    transform: translateY(10px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(8px) rotate(-45deg);
+                }
+
+            }
+        }
+
+        &-cart {
+            display: block;
+            color: $black;
+            text-decoration: none;
+            margin: 30px 0 0 30px;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 25px;
+        }
+
+        .vector {
+            width: 100%;
+            height: 1px;
+            background-color: $black;
+            margin-top: 50px;
+            opacity: 0.3;
+        }
+
+
+        &-left {
+            background-color: $white;
+        }
+
+        &-rigth {
+            background-color: $black;
+            opacity: 0.5;
+        }
+
+
+        &-active {
+            transform: translatey(100%);
+            opacity: 1;
+        }
+    }
+
+    &__form {
+        margin-top: 50px;
+        margin-left: 30px;
+
+        input {
+            width: 300px;
+            border: 0;
+            border-bottom: 2px solid var(--black, rgba(44, 44, 44, 1));
+            background-color: transparent;
+            padding-bottom: 15px;
+
+            &::placeholder {
+                color: $black;
+                font-family: Lato;
+                font-size: 21px;
+                font-weight: 400;
+                line-height: 25px;
+                opacity: 0.3;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+
+    }
+
+    &__nav-nav {
         display: none;
     }
 
@@ -23,6 +153,7 @@
 
 
     &__burger {
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -45,11 +176,15 @@
     }
 
     &__title {
-        color: $black;
         font-size: 28px;
         font-weight: 900;
         line-height: 34px;
         text-transform: uppercase;
+
+        a {
+            color: $black;
+            text-decoration: none;
+        }
     }
 
     .tabs {
